@@ -826,6 +826,8 @@ public class PathMatchingResourcePatternResolver implements ResourcePatternResol
 			}
 			return new File[0];
 		}
+		// filter - filter执行顺序 ServletComponentScan注解启动方式 @hermit
+		// 这里使用按照名字进行排序
 		Arrays.sort(files, Comparator.comparing(File::getName));
 		return files;
 	}
